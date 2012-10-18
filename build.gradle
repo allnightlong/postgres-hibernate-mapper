@@ -6,7 +6,6 @@ apply plugin: 'maven'
 apply plugin: 'signing'
 
 group = 'ru.megadevelopers'
-name = 'postgres-hibernate-mapper'
 version = '1.0'
 
 sourceCompatibility = 1.6
@@ -51,6 +50,7 @@ uploadArchives {
 
 			pom.project {
 				packaging 'jar'
+				name 'postgres-hibernate-mapper'
 				description 'postgre-hibernate-mapper is the small project to handle default hibernate id generation strategy.'
 				url 'https://github.com/allnightlong/postgres-hibernate-mapper'
 
