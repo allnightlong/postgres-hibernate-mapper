@@ -8,7 +8,7 @@ HOW-TO
 ---
 Just add this dependency to your project:
 
-	compile 'ru.megadevelopers:postgre-hibernate-mapper:1.0'
+	compile 'ru.megadevelopers:postgres-hibernate-mapper:1.0'
 Then set dialect in hibernate config:
 
 	hibernate.dialect=ru.megadevelopers.hibernate.dialect.SequencePerTablePostgresDialect
