@@ -1,0 +1,17 @@
+apply plugin: 'java'
+apply plugin: 'idea'
+
+sourceCompatibility = 1.6
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	compile 'org.hibernate:hibernate-core:4.1.2'
+	testCompile 'junit:junit:4.10'
+}
+
+task wrapper(type: Wrapper) {
+	gradleVersion = '1.2'
+}
