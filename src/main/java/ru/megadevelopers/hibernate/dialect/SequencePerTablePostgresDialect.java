@@ -1,12 +1,14 @@
 package ru.megadevelopers.hibernate.dialect;
 
 import org.hibernate.dialect.Dialect;
-import org.hibernate.dialect.PostgreSQL82Dialect;
+import org.hibernate.dialect.PostgreSQLDialect;
 import org.hibernate.id.PersistentIdentifierGenerator;
 import org.hibernate.id.SequenceGenerator;
 import org.hibernate.type.Type;
 
 import java.util.Properties;
+
+import static org.hibernate.util.StringHelper.isEmpty;
 
 /**
  * Creates a sequence per table instead of the default behavior of one sequence.
@@ -15,7 +17,7 @@ import java.util.Properties;
  * @author Burt Beckwith
  * @author Tigran Kavanosyan
  */
-public class SequencePerTablePostgresDialect extends PostgreSQL82Dialect {
+public class SequencePerTablePostgresDialect extends PostgreSQLDialect {
 	/**
 	 * Get the native identifier generator class.
 	 *
