@@ -41,15 +41,11 @@ public class SequencePerTablePostgresDialect extends PostgreSQLDialect {
 			String sequence = params.getProperty(SEQUENCE);
 			if (isEmpty(sequence)) {
 				String tableName = params.getProperty(PersistentIdentifierGenerator.TABLE);
-				if (isEmpty(tableName)) {
+				if (!isEmpty(tableName)) {
 					params.setProperty(SEQUENCE, tableName + "_" + SEQUENCE);
 				}
 			}
 			super.configure(type, params, dialect);
-		}
-
-		private boolean isEmpty(String sequence) {
-			return sequence == null || sequence.length() == 0;
 		}
 	}
 }
