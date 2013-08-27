@@ -1,5 +1,6 @@
 postgre-hibernate-mapper
 ===
+[![Build Status](https://drone.io/github.com/allnightlong/postgres-hibernate-mapper/status.png)](https://drone.io/github.com/allnightlong/postgres-hibernate-mapper/latest)
 
 postgre-hibernate-mapper is the small project to handle default hibernate id generation strategy.
 Main goal of this project is to have solution in one place.
