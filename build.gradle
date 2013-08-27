@@ -7,8 +7,6 @@ apply plugin: 'signing'
 group = 'ru.megadevelopers'
 version = '1.0'
 
-sourceCompatibility = 1.6
-
 repositories {
 	mavenCentral()
 }
