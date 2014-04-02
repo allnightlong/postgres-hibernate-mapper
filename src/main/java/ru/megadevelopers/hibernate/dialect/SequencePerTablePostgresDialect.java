@@ -1,14 +1,13 @@
 package ru.megadevelopers.hibernate.dialect;
 
 import org.hibernate.dialect.Dialect;
-import org.hibernate.dialect.PostgreSQLDialect;
+import org.hibernate.dialect.PostgreSQL9Dialect;
 import org.hibernate.id.PersistentIdentifierGenerator;
 import org.hibernate.id.SequenceGenerator;
 import org.hibernate.type.Type;
 
 import java.util.Properties;
 
-import static org.hibernate.util.StringHelper.isEmpty;
 
 /**
  * Creates a sequence per table instead of the default behavior of one sequence.
@@ -17,7 +16,7 @@ import static org.hibernate.util.StringHelper.isEmpty;
  * @author Burt Beckwith
  * @author Tigran Kavanosyan
  */
-public class SequencePerTablePostgresDialect extends PostgreSQLDialect {
+public class SequencePerTablePostgresDialect extends PostgreSQL9Dialect {
 	/**
 	 * Get the native identifier generator class.
 	 *
@@ -46,6 +45,10 @@ public class SequencePerTablePostgresDialect extends PostgreSQLDialect {
 				}
 			}
 			super.configure(type, params, dialect);
+		}
+
+		private static boolean isEmpty(String string) {
+			return string == null || string.length() == 0;
 		}
 	}
 }
