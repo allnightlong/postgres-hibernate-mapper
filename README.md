@@ -8,8 +8,10 @@ Main goal of this project is to have solution in one place.
 HOW-TO
 ---
 Just add this dependency to your project:
-
+for hibernate 3
 	compile 'ru.megadevelopers:postgres-hibernate-mapper:1.0'
+for hibernate 4
+	compile 'ru.megadevelopers:postgres-hibernate-mapper:2.0'
 Then set dialect in hibernate config:
 
 	hibernate.dialect=ru.megadevelopers.hibernate.dialect.SequencePerTablePostgresDialect
