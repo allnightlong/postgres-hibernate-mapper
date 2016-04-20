@@ -1,5 +1,19 @@
 postgre-hibernate-mapper
 ===
+Project is deprecated.
+===
+This project should be considered deprecated, as in hibernate 4.1.3 sequence-per-table was added as the new config option ([issue](https://hibernate.atlassian.net/browse/HHH-6790),
+[commit](https://github.com/hibernate/hibernate-orm/commit/cfa729d8b3979ef7c8f1c7ea0b0710429540a183)).
+
+Config should look something like this (grails app example):
+
+
+    grails.gorm.default.mapping = {
+    	id generator: 'org.hibernate.id.enhanced.SequenceStyleGenerator',
+    			params: [prefer_sequence_per_entity: true, sequence_per_entity_suffix: '_sequence']
+    }
+
+
 [![Build Status](https://drone.io/github.com/allnightlong/postgres-hibernate-mapper/status.png)](https://drone.io/github.com/allnightlong/postgres-hibernate-mapper/latest)
 
 postgre-hibernate-mapper is the small project to handle default hibernate id generation strategy.
